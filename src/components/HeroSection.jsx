@@ -2,8 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import { Button } from './styles/Button';
+import { useGlobalContext } from "../context";
 
-const HeroSection = ({name, image, para}) => {
+const HeroSection = () => {
+  const {name, image, para} = useGlobalContext();
   return (
     <Wrapper>
         <div className="container grid grid-two-column">
@@ -14,7 +16,7 @@ const HeroSection = ({name, image, para}) => {
             <Button className="btn hireme-btn">
                 <NavLink to='/Portfolio/contact'>hire me</NavLink>
             </Button>
-            </div>
+            </div>  
             <div className="section-hero-image">
                 <picture>
                     <img src={image} alt="hero img" className='hero-img' />
