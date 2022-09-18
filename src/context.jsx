@@ -39,6 +39,9 @@ const AppProvider = ({ children }) => {
 
   // to get the api data
 
+  
+
+
   const getServices = async (url) => {
     try {
       const res = await fetch(url);

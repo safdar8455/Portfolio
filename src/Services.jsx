@@ -6,6 +6,8 @@ import { useGlobalContext } from "./context";
 
 const Services = () => {
   const { services } = useGlobalContext();
+
+
   return (
     <Wrapepr className="section">
       <h2 className="common-heading">Our Services</h2>
@@ -20,7 +22,7 @@ const Services = () => {
               <div className="card-data">
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <NavLink to="/service" >
+                <NavLink to="/Portfolio/contact">
                   <Button className="btn">Read More</Button>
                 </NavLink>
               </div>

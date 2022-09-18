@@ -2,6 +2,7 @@ import About from "./About";
 import Home from "./Home";
 import Contact from "./Contact";
 import Services from "./Services"; 
+import Error from "./Error";
 import { BrowserRouter, Routes,Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -40,6 +41,7 @@ const App = () => {
       <Route path="/Portfolio/about" element = {<About />} />
       <Route path="/Portfolio/services" element = {<Services />} />
       <Route path="/Portfolio/contact" element = {<Contact />} />
+      <Route path="*" element = {<Error />} />
     </Routes>
     <Footer />
     </BrowserRouter>
