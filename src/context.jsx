@@ -1,14 +1,16 @@
 import React, { useContext, useReducer } from "react";
+import { useEffect } from "react";
 import reducer from "./reducer";
 
 const AppContext = React.createContext();
 
+const API = "http://safdarapi.herokuapp.com";
+
 const intialState = {
   name: "",
   image: "",
+  services: [],
 };
-
-
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, intialState);
@@ -23,7 +25,7 @@ const AppProvider = ({ children }) => {
       },
     });
   };
-  
+
   const updateAboutPage = () => {
     return dispatch({
       type: "ABOUT_UPDATE",
@@ -34,6 +36,23 @@ const AppProvider = ({ children }) => {
       },
     });
   };
+
+  // to get the api data
+
+  const getServices = async (url) => {
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      dispatch({ type: "GET_SERVICES", payload: data });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // to call the api
+  useEffect(() => {
+    getServices(API);
+  }, []);
 
   return (
     <AppContext.Provider value={{ ...state, updateHomePage, updateAboutPage }}>
