@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="footer-about">
             <div className="footer-logo">
               <NavLink to="/Portfolio/">
-              <img src="/public/images/logo.png" alt="logo" />
+              <img src="/public/images/invert-logo.png" alt="logo" />
               </NavLink>
             </div>
             <p>Block 9 Gulistan e Jauhar, Karachi City, Sindh</p>
@@ -121,7 +121,6 @@ const Wrapper = styled.section`
   .footer-logo img{
     height: 4rem;
     margin-left: -1rem;
-    filter: invert();
   }
 
   .contact-short-btn {

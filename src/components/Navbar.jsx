@@ -102,7 +102,8 @@ const Nav = styled.nav`
     }
     /* Hide the original nav menu */
     .navbar-list{
-      width: 100vw;
+      display: none;
+      /* width: 100vw;
       height: 100vh;
       position: absolute;
       top: 0;
@@ -118,7 +119,8 @@ const Nav = styled.nav`
       transform: translateX(100%);
 
       visibility: hidden;
-      opacity: 0;
+      opacity: 1; */
+      
 
       li {
         .navbar-link {
@@ -145,11 +147,25 @@ const Nav = styled.nav`
     }
 
     .active .close-outline{
+      
       display: inline-block;
     }
     .active .navbar-list{
-      visibility: visible;
-      opacity: 1;
+      width: 100vw;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      display: block;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
       transform: translateX(0);
       z-index: 999;
     }
