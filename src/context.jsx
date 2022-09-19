@@ -42,19 +42,52 @@ const AppProvider = ({ children }) => {
   
 
 
-  const getServices = async (url) => {
-    try {
-      const res = await fetch(url);
-      const data = await res.json();
-      dispatch({ type: "GET_SERVICES", payload: data });
-    } catch (error) {
-      console.log(error);
+  // const getServices = async (url) => {
+    
+  //     const res = await fetch(url);
+  //     const data = await  res.json();
+  //     console.log(data)
+  //     dispatch({ type: "GET_SERVICES", payload: data });
+    
+  // };
+
+  const data =[
+    {
+      id: 1,
+      title: "Web Development",
+      image: "https://source.unsplash.com/random/626x417/?webdevelopment",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, officia! Animi sunt quidem iste."
+    },
+    ,
+
+    {
+        id: 2,
+        title: "React Developer",
+        image: "https://source.unsplash.com/random/626x417/?react",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum minus soluta nam provident excepturi beatae asperiores sed voluptatibus? Repudiandae inventore beatae tenetur?"
+    },
+
+    {
+        id: 3,
+        "title": "Wordpress Developer",
+        "image": "https://source.unsplash.com/random/626x417/?wordpress",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum minus soluta nam provident excepturi beatae asperiores sed voluptatibus?"
+    },
+
+    {
+        id: 4,
+        title: "Backend Developer",
+        image: "https://source.unsplash.com/random/626x417/?backend",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum minus soluta nam provident excepturi beatae asperiores sed voluptatibus?"
     }
-  };
+  ]
+
+  // dispatch({ type: "GET_SERVICES", payload: data });
 
   // to call the api
   useEffect(() => {
-    getServices(API);
+    // getServices(API)
+    dispatch({ type: "GET_SERVICES", payload: data });
   }, []);
 
   return (
