@@ -15,6 +15,25 @@ html {
     overflow-x: hidden;
 }
 
+body{
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgb(24 24 29);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #fff;
+  border: 5px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}
+
 h1 {
     color: ${({theme})=>theme.colors.headding};
     font-size: 6rem;
@@ -30,7 +49,7 @@ h2 {
 }
 
 h3 {
-    font-size: 8rem;
+    font-size: 1.8rem;
     font-weight: 400;
 }
 
@@ -42,6 +61,7 @@ p {
   margin-top: 1rem;
   font-weight:400;
 }
+ 
 
 a {
   text-decoration: none;
@@ -95,6 +115,36 @@ input[type="submit"]{
   font-size: 1.8rem;
   cursor: pointer;
 
+}
+
+/* ==========================================*/
+              /*media queries */
+/*========================================== */
+
+@media (max-width:${({theme})=>theme.media.tab}){
+  html{
+    font-size: 55%;
+  }
+  .container{
+    padding: 0 3.2rem;
+  }
+
+  .grid-three-column{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width:${({theme})=>theme.media.mobile}){
+  html{
+    font-size: 50%;
+  }
+  .grid{
+    gap: 3.2rem;
+  }
+
+  .grid-two-column, .grid-three-column, .grid-four-column{
+    grid-template-columns: 1fr;
+  }
 }
 
 

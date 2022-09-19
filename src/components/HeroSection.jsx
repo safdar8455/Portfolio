@@ -14,7 +14,7 @@ const HeroSection = () => {
                 <h1 className="hero-heading">{name}</h1>
                 <p className="hero-para">{para}</p>
             <Button className="btn hireme-btn">
-                <NavLink to='/Portfolio/contact'>hire me</NavLink>
+                <NavLink to='/contact'>hire me</NavLink>
             </Button>
             </div>  
             <div className="section-hero-image">
@@ -68,6 +68,9 @@ padding: 9rem 0;
     .grid {
       gap: 7.2rem;
     }
+    .hero-img {
+    max-width: 95%;
+  }
   }
 
 `;
