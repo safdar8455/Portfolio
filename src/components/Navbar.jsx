@@ -10,28 +10,28 @@ const Navbar = () => {
       <div className={isOpenMenu ? "menuIcon active" : "menuIcon"}>
         <ul className="navbar-list">
           <li>
-            <NavLink to="/" className="navbar-link"
+            <NavLink to="/Portfolio/" className="navbar-link"
             onClick={()=>setIsOpenMenu(false)}
             >
               Home
             </NavLink>
           </li>
           <li>
-          <NavLink to="/about" className="navbar-link"
+          <NavLink to="/Portfolio/about" className="navbar-link"
             onClick={()=>setIsOpenMenu(false)}
             >
               About
             </NavLink>
           </li>
           <li>
-          <NavLink to="/services" className="navbar-link"
+          <NavLink to="/Portfolio/services" className="navbar-link"
             onClick={()=>setIsOpenMenu(false)}
             >
               Services
             </NavLink>
           </li>
           <li>
-          <NavLink to="/contact" className="navbar-link"
+          <NavLink to="/Portfolio/contact" className="navbar-link"
             onClick={()=>setIsOpenMenu(false)}
             >
               Contact

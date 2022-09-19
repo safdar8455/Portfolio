@@ -6,7 +6,7 @@ import Navbar from './Navbar'
 const Header = () => {
   return (
     <MainHeader>
-      <NavLink to="/">
+      <NavLink to="/Portfolio/">
         <img src="./images/logo.png" alt="logo" className='logo' />
       </NavLink>
       <Navbar />

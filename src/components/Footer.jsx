@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
 
           <div className="contact-short-btn">
-            <NavLink to="/">
+            <NavLink to="/Portfolio/">
               <Button>Get Started</Button>
             </NavLink>
           </div>
@@ -29,7 +29,7 @@ const Footer = () => {
           {/* First column */}
           <div className="footer-about">
             <div className="footer-logo">
-              <NavLink to="/">
+              <NavLink to="/Portfolio/">
               <img src="/public/images/logo.png" alt="logo" />
               </NavLink>
             </div>
