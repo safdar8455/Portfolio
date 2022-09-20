@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="footer-about">
             <div className="footer-logo">
               <NavLink to="/Portfolio/">
-              <img src="/public/images/invert-logo.png" alt="logo" />
+              <img src="./images/logo.png" alt="logo" />
               </NavLink>
             </div>
             <p>Block 9 Gulistan e Jauhar, Karachi City, Sindh</p>
@@ -52,7 +52,7 @@ const Footer = () => {
 
           {/* THird column */}
           <div className="footer-social">
-            <h3>Follows Us</h3>
+            <h3>Social Links</h3>
             <div className="footer-social--icons">
               <div>
               <a href="https://www.facebook.com/SafdarHussain8455/" target="_blank">
@@ -84,7 +84,7 @@ const Footer = () => {
 
           {/* Fourth Column */}
           <div className="footer-contact">
-            <h3>Call Us</h3>
+            <h3>Phone</h3>
             <h3>+92 348 0296567</h3>
           </div>
         </div>
@@ -121,6 +121,7 @@ const Wrapper = styled.section`
   .footer-logo img{
     height: 4rem;
     margin-left: -1rem;
+    filter: invert();
   }
 
   .contact-short-btn {

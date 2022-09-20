@@ -27,7 +27,7 @@ const Navbar = () => {
           <NavLink to="/Portfolio/services" className="navbar-link"
             onClick={()=>setIsOpenMenu(false)}
             >
-              Services
+              Portfolio
             </NavLink>
           </li>
           <li>

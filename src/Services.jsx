@@ -7,13 +7,12 @@ import { useGlobalContext } from "./context";
 const Services = () => {
   const { services } = useGlobalContext();
 
-
   return (
     <Wrapepr className="section">
-      <h2 className="common-heading">Our Services</h2>
+      <h2 className="common-heading">Portfolio</h2>
       <div className="container grid grid-three-column">
         {services.map((curElem) => {
-          const { id, title, image, description } = curElem;
+          const { id, title, image, description, demo, github } = curElem;
           return (
             <div key={id} className="card">
               <figure>
@@ -22,9 +21,14 @@ const Services = () => {
               <div className="card-data">
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <NavLink to="/Portfolio/contact">
-                  <Button className="btn">Read More</Button>
-                </NavLink>
+                <div className="card-btn">
+                  <a href={demo}>
+                    <Button className="btn-D btn">Demo</Button>
+                  </a>
+                  <a href={github}>
+                    <Button className="btn-G btn">GitHub</Button>
+                  </a>
+                </div>
               </div>
             </div>
           );
@@ -41,6 +45,11 @@ const Wrapepr = styled.section`
   .container {
     max-width: 120rem;
   }
+  .card-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .card {
     border: 0.1rem solid rgb(170 170 170 / 40%);
@@ -52,18 +61,32 @@ const Wrapepr = styled.section`
       font-weight: 300;
       font-size: 2.4rem;
     }
+
     .btn {
-      margin: 2rem auto;
-      background-color: rgb(0 0 0 / 0%);
-      border: 0.1rem solid rgb(98 84 243);
+      margin: 2rem 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: rgb(98 84 243);
       font-size: 1.4rem;
+    }
+
+    .btn-D {
+      background-color: rgb(0 0 0 / 0%);
+      border: 0.1rem solid rgb(98 84 243);
+      color: rgb(98 84 243);
       &:hover {
         background-color: rgb(98 84 243);
         color: #fff;
+      }
+    }
+
+    .btn-G {
+      background-color: rgb(98 84 243);
+      color: #fff;
+      &:hover {
+        background-color: rgb(0 0 0 / 0%);
+        border: 0.1rem solid rgb(98 84 243);
+        color: rgb(98 84 243);
       }
     }
   }
@@ -100,21 +123,22 @@ const Wrapepr = styled.section`
       transition: all 0.2s linear;
     }
   }
-  @media (max-width:${({theme})=>theme.media.tab}){
-    .grid-three-column{
+  @media (max-width: ${({ theme }) => theme.media.tab}) {
+    .grid-three-column {
       grid-template-columns: 1fr 1fr;
     }
   }
 
-  @media (max-width:${({theme})=>theme.media.mobile}){
-  .grid{
-    gap: 3.2rem;
-  }
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .grid {
+      gap: 3.2rem;
+    }
 
-  .grid-two-column, .grid-three-column{
-    grid-template-columns: 1fr;
+    .grid-two-column,
+    .grid-three-column {
+      grid-template-columns: 1fr;
+    }
   }
-}
 `;
 
 export default Services;
