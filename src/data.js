@@ -8,7 +8,17 @@ export const data = [
       description:
         "Tik Tit app clone is like a Tiktok aplication and develop in next.js in which have upload, google sign in, like and comments and manny more functionality...",
     },
-    ,
+
+    {
+      id: 10,
+      title: "Music App",
+      image: "./images/Portfolio10.png",
+      demo: "https://safdar8455.github.io/music_app/",
+      github: "https://github.com/safdar8455/music_app",
+      description:
+        "Music App is a React Vite Project in which use Shazam API to gather music data, use Shazam Core API to gather artist details and recommended tracks, and use IP Geolocation API to get the users location",
+    },
+    
     {
       id: 2,
       title: "HooBank",
@@ -41,6 +51,16 @@ export const data = [
 
     {
       id: 5,
+      title: "MERN Project",
+      image: "./images/Portfolio9.png",
+      demo: "https://mernproject12.herokuapp.com/",
+      github: "https://github.com/safdar8455/Mern-Project",
+      description:
+        "In this Project user can register, login and see his profile data in about page this project made by using MERN",
+    },
+
+    {
+      id: 9,
       title: "Expense Record App",
       image: "./images/Portfolio5.png",
       demo: "https://safdar8455.github.io/myfirstReactApp.github.io/",
@@ -77,7 +97,9 @@ export const data = [
       github: "https://github.com/safdar8455/Herokuapi",
       description:
         "Herokuapi is the REST Api Project.",
-    }
+    },
+
+    
 
   ];
   

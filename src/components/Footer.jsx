@@ -75,7 +75,7 @@ const Footer = () => {
                 </a>
               </div>
               <div>
-                <a href="https://web.whatsapp.com/send?phone=923480296567&text&type=phone_number&app_absent=0" target="_blank">
+                <a href="https://wa.me/923480296567" target="_blank">
                 <FaWhatsapp className="icons" />
                 </a>
               </div>

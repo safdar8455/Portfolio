@@ -23,7 +23,7 @@ const AppProvider = ({ children }) => {
       payload: {
         title: "Hey folks,",
         name: "Safdar Hussain",
-        image: "./images/hero.svg",
+        image: "./images/about1.png",
         para: "I'm Safdar Hussain. A Full stack Developer, Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.",
       },
     });
@@ -34,7 +34,7 @@ const AppProvider = ({ children }) => {
       type: "ABOUT_UPDATE",
       payload: {
         name: "Safdar Hussain",
-        image: "./images/about1.png",
+        image: "./images/hero.svg",
         para: "Hello! I'm Safdar Hussain, a Web Developer based in Karachi, who enjoys building things that live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends. During my graduation from Sindh Madressatul Islam University, I developed interest in Web Development and dedicated my efforts in learning modern web technologies.",
         
       },
