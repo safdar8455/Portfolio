@@ -24,7 +24,7 @@ const HeroSection = () => {
               <NavLink to="/Portfolio/contact">hire me</NavLink>
             </Button>
             <Button className="hero-btn">
-              <a href="https://drive.google.com/file/d/1gjk5hooAhewXy-yRm1RD9-lfM_c_eFii/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1e6ihcWE6yXneLqPN-B33pGfSRAvmnojx/view?usp=sharing">
                 Resume
               </a>
             </Button>
