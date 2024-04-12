@@ -82,14 +82,14 @@ const Wrapper = styled.section`
     text-align: center;
   }
   .hero-img {
-    max-width: 80%;
+    max-width: 100%;
   }
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .grid {
       gap: 7.2rem;
     }
     .hero-img {
-      max-width: 95%;
+      max-width: 100%;
     }
   }
 `;
